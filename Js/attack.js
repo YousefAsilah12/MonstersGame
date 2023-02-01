@@ -7,7 +7,6 @@ import {
 
 function combatStart() {
   checkFirstStart(monster1, player1);
-
   //   monsterAttack();
   //   playerAttack();
   //   calcDamage();
