@@ -5,11 +5,8 @@ import {
   player1
 } from "./player.js";
 
+import {runBtn,attackBtn,playerName,playerHealth,playerLvl,monsterName,monsterHealth,monsterLvl} from "./input.js";
 
-
-function updateHtml(life){
-  playerHealth.innerText = life;
-}
 
 // playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack(){
