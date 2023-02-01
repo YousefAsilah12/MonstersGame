@@ -8,7 +8,7 @@ import {
 
 function calcDamage(){
   //check who's turn is it -- make a function turns()
-
+    
 }
 
 function playerAttack(){
