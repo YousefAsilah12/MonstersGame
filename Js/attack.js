@@ -16,17 +16,37 @@ function updateLifeHtml(){
 
 // playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack(){
+  debugger
   const rnd = Math.floor(Math.random()*20)+1;
-  const score = (( player1.strength + rnd ) * monster1.defense ) - monster1.defense;  
-  monster1.life -= score;
-  updateLifeHtml();
+  let score = (player1.strength + rnd ) * player1.lvl ;
+   score=score- monster1.defense;  
+  const res =monster1.life - score;
+  if (res >0){
+    monster1.life = res;
+    updateLifeHtml();
+    currentTurn="monster";
+  
+  }
+  else{
+    alert("game Over");
+  }
 }
 
 function monsterAttack(){
+  debugger
   const rnd = Math.floor(Math.random()*20)+1;
-  const score = (( monster1.strength + rnd ) * player1.defense ) - player1.defense; 
-  player1.life -= score;
-  updateLifeHtml();
+  let score = ( monster1.strength + rnd ) * monster1.lvl 
+  score=score- player1.defense; 
+  const res =monster1.life - score;
+  if (res >0){
+    player1.life = res;
+    updateLifeHtml();
+    currentTurn="player";
+    
+  }
+  else{
+    alert("game Over");
+  }
 }
 
 function attack(currentTurn){
@@ -56,6 +76,7 @@ function checkFirstStart(monster, player) {
   return 'monster';
 }
 
+  
 attackBtn.addEventListener('click', ()=> {
   attack(currentTurn);
 });

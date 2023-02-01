@@ -13,7 +13,7 @@
         this.life = life;
     }
 }
-export const player1 = new Player('YBN', 50, 4, 0, 3, 1, 20, 100, 5);
+export const player1 = new Player('YBN', 50, 4, 0, 3, 1, 20, 100, 100);
 
 // Strength (will be used to determine damage)
 // Defense (will be used to determine damage)
