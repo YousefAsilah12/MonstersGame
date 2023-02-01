@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+ }
+ 
+ 
+ .container {  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1.3fr 0.7fr;
+   grid-auto-columns: 1fr;
+   grid-auto-rows: 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     "Player Middle Monster"
+     "Actions Actions Actions";
+ 
+   background-image: url("/imgs/battleback1.png");
+ 
+ 
+   height: 100%;
+ 
+ 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+ 
+ .player { grid-area: Player;}
+ 
+ .monster { grid-area: Monster;}
+ 
+ .middle { grid-area: Middle;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+ }
+ .middle h2 {
+   font-size: 3rem;
+ }
+ .actions { grid-area: Actions;}
+ 
+ 
+ 
+ .player img {
+   width: 500px;
+   height: 500px;
+   margin-left: 15rem;
+ }
+ 
+ .monster img {
+   width: 500px;
+   height: 500px;
+   transform: scaleX(-1);
+ }
+ 
+ 
+ .footer {
+   display: grid; 
+   grid-template-columns: 1fr 1fr 1fr; 
+   grid-template-rows: 1fr 1fr; 
+   gap: 0px 0px; 
+   border: 5px solid black;
+   grid-template-areas: 
+     "attack info info"
+     "run info info"; 
+   grid-area: Actions;
+   background: rgba(51, 170, 51, .4);
+ }
+ 
+ .attack { grid-area: attack;
+   border: 5px solid black;
+   text-align: center; 
+   padding: 5rem;
+ }
+ 
+ 
+ .run { grid-area: run;
+     border: 5px solid black;
+     text-align: center;
+     padding: 5rem;
+    }
+ 
+ .run button, .attack button {
+     font-size: 50px;
+     background-color: Transparent;
+     background-repeat:no-repeat;
+     border-radius: 30px;
+     padding: 0.5rem;
+     border: black solid 5px;
+   }
+ 
+   .run button:hover, .attack button:hover {
+     cursor: pointer;
+     background: rgba(51, 170, 51, .7);
+ 
+   }
+ 
+ 
+ .info { grid-area: info;
+     border: 5px black solid;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: flex-start;
+   }
+ 
+ .info p {
+   margin-left: 5rem;
+   margin-top: 3rem;
+   font-size: 50px;
+ }
