@@ -95,11 +95,19 @@
   justify-content: center;
   align-items: center;;;
 } 
- .attack { grid-area: attack;
+ .attack { 
    border: 5px solid black;
    text-align: center; 
    padding: 5rem;
+    display: flex; ;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
  }
+ #attackBtn,#runBtn{ 
+  padding: 10%;
+ }
+
  
  
  .run { grid-area: run;
