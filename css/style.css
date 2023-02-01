@@ -31,10 +31,25 @@
    background-repeat: no-repeat;
    background-size: cover;
  }
+ .up-side{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  
+ }
+ .player {
+   grid-area: Player;
+   display: flex;;
+   justify-content: center;
+   align-items: center;;
+}
  
- .player { grid-area: Player;}
- 
- .monster { grid-area: Monster;}
+ .monster { grid-area: Monster;
+  display: flex;;
+  justify-content: center;
+  align-items: center;;
+}
  
  .middle { grid-area: Middle;
    display: flex;
@@ -52,7 +67,6 @@
  .player img {
    width: 500px;
    height: 500px;
-   margin-left: 15rem;
  }
  
  .monster img {
@@ -74,7 +88,13 @@
    grid-area: Actions;
    background: rgba(51, 170, 51, .4);
  }
- 
+.footer-up,.footer-down{
+  width: 100%;
+  height: 50%;
+  display: flex;;
+  justify-content: center;
+  align-items: center;;;
+} 
  .attack { grid-area: attack;
    border: 5px solid black;
    text-align: center; 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,57 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Combat Page</title>
 </head>
+
 <body>
   <section class="container">
-    <article class="player">
-      <span class="playerImage" > 
-        <img src="/imgs/playerimage.png" alt="">
-      </span>
-    </article>
-    <div class="monster">
-      <span class="monsterImage" > 
-        <img src="/imgs/monsterimage.png" alt="">
-      </span>
+    <div class="up-side">
+
+
+      <article class="player">
+        <span class="playerImage">
+          <img src="/imgs/playerimage.png" alt="">
+        </span>
+      </article>
+      <div class="middle">
+        <h2>Battle!</h2>
+        <h2>The Deadly Monster</h2>
+        <h2>Xp Reward: <span id="rewardXp">500</span>xp</h2>
+        <h2>Gold Reward: <span id="rewardGold">50</span>g</h2>
+      </div>
+
+      <div class="monster">
+        <span class="monsterImage">
+          <img src="/imgs/monsterimage.png" alt="">
+        </span>
+      </div>
     </div>
-    <div class="middle">
-      <h2>Battle!</h2>
-      <h2>The Deadly Monster</h2>
-      <h2>Xp Reward: <span id="rewardXp" >500</span>xp</h2>
-      <h2>Gold Reward: <span id="rewardGold" >50</span>g</h2>
-    </div>
+
     <footer class="footer">
-        <div class="attack">
-          <button id="attackBtn">Attack</button>
-        </div>
-        <div class="run">
-          <button id="runBtn">Run</button>
-        </div>
-        <div class="info">
+      <div class="attack">
+        <button id="attackBtn">Attack</button>
+      </div>
+      <div class="run">
+        <button id="runBtn">Run</button>
+      </div>
+
+      <div class="info">
+        <div class="footer-up">
           <p class="playerInfo">Player Name: <span id="playerName">
-            PlayerName</span> Health: <span class="playerHealth"> 100 </span>  Level: <span id="playerLvl">1</span></p>
-          <p class="monsterInfo">Monster Name: <span id="monsterName">MonsterName</span>
-             Health: <span class="monsterHealth"> 100</span> Level: <span id="monsterLvl">1</span></p>
+              PlayerName</span> Health: <span class="playerHealth"> 100 </span> Level: <span id="playerLvl">1</span></p>
 
         </div>
+        <div class="footer-down">
+
+
+          <p class="monsterInfo">Monster Name: <span id="monsterName">MonsterName</span>
+            Health: <span class="monsterHealth"> 100</span> Level: <span id="monsterLvl">1</span></p>
+        </div>
+      </div>
+
     </footer>
   </section>
-  <script src="./Js/attack.js" type="module" ></script>
+  <script src="./Js/attack.js" type="module"></script>
 
 </body>
-</html>
 
+</html>

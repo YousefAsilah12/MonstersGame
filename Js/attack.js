@@ -110,4 +110,14 @@ attackBtn.addEventListener("click", () => {
     if(currentTurn === "monster"){
       attackBtn.textContent = 'Monster Attack'
     } else { attackBtn.textContent = 'Player Attack'}
+
+
 });
+
+//animate the charcater
+function animateCharacter(char){
+    if(char === "monster")
+    {
+        
+    }
+}
