@@ -1,4 +1,6 @@
 
+import {monster1} from "./monster.js";
+import {player1} from "./player.js";
 
 function combatStart(){
   checkFirstSart();

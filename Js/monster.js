@@ -10,7 +10,7 @@ class Monster {
         this.gold = gold;
     }
 }
-const m1 = new Monster('Gooloop', 30, 2, 240, 3, 20, 20, 3);
+const monster1 = new Monster('Gooloop', 30, 2, 240, 3, 20, 20, 3);
 
 
 // Name
