@@ -7,20 +7,26 @@ import {
 
 import {runBtn,attackBtn,playerName,playerHealth,playerLvl,monsterName,monsterHealth,monsterLvl} from "./input.js";
 
+let currentTurn = 'player';
+
+function updateLifeHtml(){
+  playerHealth.innerText = player1.life;
+  monsterHealth.innerText = monster1.life;
+}
 
 // playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack(){
   const rnd = Math.floor(Math.random()*20)+1;
   const score = (( player1.strength + rnd ) * monster1.defense ) - monster1.defense;  
   monster1.life -= score;
-  updateHtml(monster1.life);
+  updateLifeHtml();
 }
 
 function monsterAttack(){
   const rnd = Math.floor(Math.random()*20)+1;
   const score = (( monster1.strength + rnd ) * player1.defense ) - player1.defense; 
   player1.life -= score;
-  updateHtml(player1.life);
+  updateLifeHtml();
 }
 
 function attack(currentTurn){
@@ -50,3 +56,6 @@ function checkFirstStart(monster, player) {
   return 'monster';
 }
 
+attackBtn.addEventListener('click', ()=> {
+  attack(currentTurn);
+});
