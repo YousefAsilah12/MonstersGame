@@ -17,7 +17,7 @@ function updateLifeHtml(){
 // playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack(){
   const rnd = Math.floor(Math.random()*20)+1;
-  const score = (( player1.strength + rnd ) * player1.lvl ) - monster1.defense;  
+  const score = (( player1.strength + rnd ) * monster1.defense ) - monster1.defense;  
   monster1.life -= score;
   updateLifeHtml();
 }
