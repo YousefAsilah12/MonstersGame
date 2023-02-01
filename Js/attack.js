@@ -53,6 +53,7 @@ function playerAttack() {
         updateXPandGold();
         console.log("player gold", player1.gold);
         console.log("player XP", player1.currentXP);
+        alert("GAME OVER");
 
         // updateXp for player
         // go back to map
@@ -71,7 +72,7 @@ function monsterAttack() {
         updateLifeHtml();
         currentTurn = "player";
     } else {
-        console.log("GAME OVER");
+        alert("GAME OVER");
     }
 }
 
