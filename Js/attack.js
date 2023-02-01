@@ -23,6 +23,12 @@ function updateLifeHtml() {
     monsterHealth.innerText = monster1.life;
 }
 
+function updateXPandGold() {
+  player1.currentXP += monster1.rewardXP;
+  player1.gold += monster1.gold;
+}
+
+
 // playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack() {
     const rnd = Math.floor(Math.random() * 20) + 1;
