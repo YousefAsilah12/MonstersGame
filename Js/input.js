@@ -1,12 +1,12 @@
-const runBtn = document.getElementById('runBtn');
-const attackBtn = document.getElementById('attackBtn');
+export const runBtn = document.getElementById('runBtn');
+export const attackBtn = document.getElementById('attackBtn');
 
 
-const playerName = document.getElementById('playerName');
-const playerHealth = document.querySelector('.playerHealth');
-const playerLvl = document.getElementById('playerLvl');
+export const playerName = document.getElementById('playerName');
+export const playerHealth = document.querySelector('.playerHealth');
+export const playerLvl = document.getElementById('playerLvl');
 
 
-const monsterName = document.getElementById('monsterName');
-const monsterHealth = document.querySelector('.monsterHealth');
-const monsterLvl = document.getElementById('monsterLvl');
+export const monsterName = document.getElementById('monsterName');
+export const monsterHealth = document.querySelector('.monsterHealth');
+export const monsterLvl = document.getElementById('monsterLvl');
