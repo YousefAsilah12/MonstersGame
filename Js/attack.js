@@ -5,6 +5,7 @@ import {
   player1
 } from "./player.js";
 
+
 function calcDamage(){
   //check who's turn is it -- make a function turns()
 
@@ -25,14 +26,13 @@ function attack(currentTurn){
   }
 }
 
+
 function combatStart(){
   let currentTurn = checkFirstStart();
   attack(currentTurn);
-
 //   calcDamage();
 //   checkDefeat();
 }
-
 
 function checkFirstStart(monster, player) {
   debugger
@@ -41,6 +41,7 @@ function checkFirstStart(monster, player) {
   const pWIthDex = rnd1 + player.dexterity;
   const MWIthDex = rnd2 + monster.dexterity;
   if (pWIthDex > MWIthDex) {
+
     return 'player';
   }
   return 'monster';
