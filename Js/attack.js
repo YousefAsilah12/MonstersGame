@@ -5,10 +5,11 @@ import {
   player1
 } from "./player.js";
 
+import {runBtn,attackBtn,playerName,playerHealth,playerLvl,monsterName,monsterHealth,monsterLvl} from "./input.js";
 
 function calcDamage(){
   //check who's turn is it -- make a function turns()
-    
+
 }
 
 function playerAttack(){
