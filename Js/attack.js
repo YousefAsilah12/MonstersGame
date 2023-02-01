@@ -7,8 +7,8 @@ import {
 
 
 
-function updateHtml(input){
-  .innerText = 
+function updateHtml(life){
+  playerHealth.innerText = life;
 }
 
 // playerAttack & monsterAttack functions calculating The damage and updating life.
@@ -23,6 +23,7 @@ function monsterAttack(){
   const rnd = Math.floor(Math.random()*20)+1;
   const score = (( monster1.strength + rnd ) * player1.defense ) - player1.defense; 
   player1.life -= score;
+  updateHtml(player1.life);
 }
 
 function attack(currentTurn){
