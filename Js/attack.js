@@ -89,7 +89,14 @@ function checkFirstStart(monster, player) {
     }
     return "monster";
 }
+if(currentTurn === "monster"){
+  attackBtn.textContent = 'Monster Attack'
+} else { attackBtn.textContent = 'Player Attack'};
+
 
 attackBtn.addEventListener("click", () => {
     attack(currentTurn);
+    if(currentTurn === "monster"){
+      attackBtn.textContent = 'Monster Attack'
+    } else { attackBtn.textContent = 'Player Attack'}
 });
