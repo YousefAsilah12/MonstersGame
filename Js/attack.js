@@ -5,13 +5,33 @@ import {
   player1
 } from "./player.js";
 
-function combatStart() {
-  checkFirstStart(monster1, player1);
 
-  //   monsterAttack();
-  //   playerAttack();
-  //   calcDamage();
-  //   checkDefeat();
+function calcDamage(){
+  //check who's turn is it -- make a function turns()
+
+}
+
+function playerAttack(){
+  // score (strength + roll ) * defense 
+  const rnd =Math.floor(Math.random()*20)+1;
+  const score = (( monster1.strength + rnd ) * monster1.defense ) - monster1.defense;  
+}
+
+
+function attack(currentTurn){
+  if(currentTurn === 'player'){
+    playerAttack();
+  } else if(currentTurn === 'monster') {
+    monsterAttack();
+  }
+}
+
+
+function combatStart(){
+  let currentTurn = checkFirstStart();
+  attack(currentTurn);
+//   calcDamage();
+//   checkDefeat();
 }
 
 function checkFirstStart(monster, player) {
@@ -21,8 +41,9 @@ function checkFirstStart(monster, player) {
   const pWIthDex = rnd1 + player.dexterity;
   const MWIthDex = rnd2 + monster.dexterity;
   if (pWIthDex > MWIthDex) {
-    return player;
+
+    return 'player';
   }
-  return monster;
+  return 'monster';
 }
 
