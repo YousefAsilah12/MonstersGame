@@ -8,39 +8,41 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Combat Page</title>
 </head>
-
 <body>
   <section class="container">
     <div class="up-side">
 
 
-      <article class="player">
-        <span class="playerImage">
-          <img src="/imgs/playerimage.png" alt="">
+      <article class="player" id="left">
+        <span class="playerImage" >
+          <img src="/imgs/playerimage.png"  id="img_1" style="flex: 1;" alt="">
         </span>
       </article>
       <div class="middle">
+        <div class="contract-info" >
         <h2>Battle!</h2>
         <h2>The Deadly Monster</h2>
         <h2>Xp Reward: <span id="rewardXp">500</span>xp</h2>
         <h2>Gold Reward: <span id="rewardGold">50</span>g</h2>
       </div>
+      </div>
 
-      <div class="monster">
+      <div class="monster" id="right">
         <span class="monsterImage">
-          <img src="/imgs/monsterimage.png" alt="">
+          <img src="/imgs/monsterimage.png" id="img_2" style="flex: 1;"  alt="">
         </span>
       </div>
     </div>
 
     <footer class="footer">
+      <div class="left-footer">
       <div class="attack">
         <button id="attackBtn">Attack</button>
       </div>
       <div class="run">
         <button id="runBtn">Run</button>
       </div>
-
+    </div>
       <div class="info">
         <div class="footer-up">
           <p class="playerInfo">Player Name: <span id="playerName">
@@ -56,6 +58,7 @@
       </div>
 
     </footer>
+
   </section>
   <script src="./Js/attack.js" type="module"></script>
 
