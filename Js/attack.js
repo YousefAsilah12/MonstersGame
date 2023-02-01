@@ -6,10 +6,6 @@ import {
 } from "./player.js";
 
 
-  // check who's turn is it 
-function gameTurns(){
-
-}
 
 function updateHtml(input){
   .innerText = 
