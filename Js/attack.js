@@ -14,7 +14,7 @@ import {
 
 
 
-let currentTurn = "player";
+let currentTurn = checkFirstStart(monster1, player1);
 
 
 
@@ -39,10 +39,8 @@ function playerAttack() {
         currentTurn = "monster";
     } else {
         alert("monster Died");
-        // updateXp for player
-        // go back to map
-        // update gold collected
-        //
+        // update Xp and gold collected for player
+        // go to other page 
     }
 }
 
@@ -57,6 +55,7 @@ function monsterAttack() {
         currentTurn = "player";
     } else {
         alert("game Over");
+        // GAME OVER FUNCTION ask the user if play again --- respawn? or exit game. restart
     }
 }
 
