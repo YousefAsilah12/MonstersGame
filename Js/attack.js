@@ -27,6 +27,12 @@ function updateLifeHtml() {
     monsterHealth.innerText = monster1.life;
 }
 
+function updateXPandGold() {
+  player1.currentXP += monster1.rewardXP;
+  player1.gold += monster1.gold;
+}
+
+
 // playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack() {
     const rnd = Math.floor(Math.random() * 20) + 1;
@@ -42,7 +48,12 @@ function playerAttack() {
         updateLifeHtml();
         currentTurn = "monster";
     } else {
-        alert("monster Died");
+      
+        console.log("monster died!");
+        updateXPandGold();
+        console.log("player gold", player1.gold);
+        console.log("player XP", player1.currentXP);
+
         // updateXp for player
         // go back to map
         // update gold collected
@@ -60,7 +71,7 @@ function monsterAttack() {
         updateLifeHtml();
         currentTurn = "player";
     } else {
-        alert("game Over");
+        console.log("GAME OVER");
     }
 }
 
@@ -79,7 +90,6 @@ function combatStart() {
 }
 
 function checkFirstStart(monster, player) {
-    debugger;
     const rnd1 = Math.floor(Math.random() * 20) + 1;
     const rnd2 = Math.floor(Math.random() * 20) + 1;
     const pWIthDex = rnd1 + player.dexterity;
