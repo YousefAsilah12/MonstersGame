@@ -14,7 +14,11 @@ import {
 
 
 
-let currentTurn = "player";
+let currentTurn = checkFirstStart(player1, monster1);
+playerName.innerText=player1.name;
+monsterName.innerText=monster1.name;
+monsterHealth.innerText=monster1.life;
+playerHealth.innerText=player1.life;
 
 
 
