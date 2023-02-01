@@ -7,17 +7,27 @@ import {
 
 import {runBtn,attackBtn,playerName,playerHealth,playerLvl,monsterName,monsterHealth,monsterLvl} from "./input.js";
 
-function calcDamage(){
-  //check who's turn is it -- make a function turns()
+let currentTurn = 'player';
 
+function updateLifeHtml(){
+  playerHealth.innerText = player1.life;
+  monsterHealth.innerText = monster1.life;
 }
 
+// playerAttack & monsterAttack functions calculating The damage and updating life.
 function playerAttack(){
-  // score (strength + roll ) * defense 
-  const rnd =Math.floor(Math.random()*20)+1;
-  const score = (( monster1.strength + rnd ) * monster1.defense ) - monster1.defense;  
+  const rnd = Math.floor(Math.random()*20)+1;
+  const score = (( player1.strength + rnd ) * monster1.defense ) - monster1.defense;  
+  monster1.life -= score;
+  updateLifeHtml();
 }
 
+function monsterAttack(){
+  const rnd = Math.floor(Math.random()*20)+1;
+  const score = (( monster1.strength + rnd ) * player1.defense ) - player1.defense; 
+  player1.life -= score;
+  updateLifeHtml();
+}
 
 function attack(currentTurn){
   if(currentTurn === 'player'){
@@ -27,11 +37,9 @@ function attack(currentTurn){
   }
 }
 
-
 function combatStart(){
   let currentTurn = checkFirstStart();
   attack(currentTurn);
-//   calcDamage();
 //   checkDefeat();
 }
 
@@ -48,3 +56,6 @@ function checkFirstStart(monster, player) {
   return 'monster';
 }
 
+attackBtn.addEventListener('click', ()=> {
+  attack(currentTurn);
+});
