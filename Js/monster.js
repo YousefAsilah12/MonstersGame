@@ -10,7 +10,7 @@ class Monster {
         this.gold = gold;
     }
 }
-export const monster1 = new Monster('Gooloop', 30, 2, 240, 3, 20, 20, 100);
+export const monster1 = new Monster('Gooloop', 30, 2, 240, 2, 20, 20, 100);
 
 
 // Name
