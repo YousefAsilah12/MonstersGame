@@ -53,7 +53,7 @@ const monsterNames = [
   const rewardXP = Math.floor(Math.random() * 100 + 50);
   const life = Math.floor(Math.random() * 100 + 50);
   const location = locations[locationIndex];
-const img='./img/monsterimage.png';
+  const img='/imgs/monsterimage.png';
 
   const monster = new Monster(
     name,
