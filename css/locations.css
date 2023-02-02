@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: monospace;
+  background-color: rgba(169, 169, 169, 0.553);
+}
+
+.allContainer {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 3rem 0rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "buttons"
+    "image"
+    "footer";
+}
+
+.img-container {
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#image {
+  height: 50vh;
+  width: 40vw;
+  object-fit: contain;
+}
+
+
+.buttons {
+  grid-area: buttons;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons button, button {
+  font-family: monospace;
+  padding: 0px 2vw;
+  margin: 3vh 3vw;
+  font-size: 1vw;
+  background-color: rgba(169, 169, 169, 0.9);
+}
+
+.footer button {
+ margin-left: 40vw;
+ padding: 1vh 2vw;
+}
+
+.buttons button:hover, .footer button:hover {
+  border-color: rgba(169, 169, 169, 0.189);
+  cursor: pointer;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgba(169, 169, 169, 0.9);
+}
+.footer h1 {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 600;
+}
