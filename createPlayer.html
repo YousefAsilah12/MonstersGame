@@ -12,20 +12,40 @@
     <div class="main-Create-Player">
 
       <div class="create-player-background"></div>
+
         <div class="input-container">
-         <div class="input-headings">
+         <div class="headings">
             <h2>Player Name</h2> 
             <h2><h2>Something else</h2>
             <h2>Something else</h2>
+            <h2 class="gender">Gender</h2>
         </div>
         <div class="input-player-data">
-            <input type="text">
-             <input type="text">
-            <input type="text">
+            <input id="name-of-player" type="text">
+            <input id="strength-of-player" type="text">
+            <input id="xp-of-player" type="range" min="4" max="6">
+            <div>
+                <select class="select-gender" name="gender" id="gender-select">
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="alien">Alien</option>
+                </select>
+            </div>
         </div>
-         </div>
-
+        </div>
+            <div class="player-stats-container">
+                <div class="stats-headings headings">
+                    <h2>XP</h2>
+                    <h2>Life</h2>
+                </div>
+                <div class="stats-headings headings">
+                    <h2 id="xp">100</h2>
+                    <h2 id="life">100</h2>
+                </div>
+        </div>
+     
     </div>
-  
+
+    <script src="./Js/input.js" type="module"></script>
 </body>  
 </html>

@@ -27,19 +27,20 @@ body {
 .input-player-data {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-left: 1rem;
 }
 input{
     width: 10rem;
     height: 2rem;
-    margin-top: 2px;
+    margin-top: 8px;
 }
-.input-headings {
+.headings h2{
     color: rgb(252, 252, 252);
     min-width: fit-content;
+    margin-top: 0.8rem;
 }
+
 .input-container {
     display: flex;
     align-items: center;
@@ -55,6 +56,25 @@ input{
     height: 100vh;
 }
 
+.select-gender{
+    width: 10rem;
+    height: 2rem;
+    margin-top: 8px;
+    color: black;
+}
+
+.player-stats-container{
+    display: flex;
+    color:whitesmoke;
+    height: fit-content;
+    justify-content: space-between;
+    min-width: 10rem;
+    border: solid white;
+}
+.stats-headings{
+    display: flex;
+    flex-direction: column;
+}
 
 @media (max-width: 900px){
 
@@ -66,8 +86,8 @@ input{
         height: 50%;
     }
 
-    .input-headings {
-        font-size: small;
+    .headings h2{
+        font-size: medium;
     }
     input{
         width: 10rem;
