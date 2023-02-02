@@ -57,8 +57,10 @@ function playerAttack() {
         updateXPandGold();
         console.log("player gold", player1.gold);
         console.log("player XP", player1.currentXP);
-        alert("GAME OVER");
-
+        winnerAlert(player1.name, player1.currentXP, player1.gold);
+        
+        
+        
         // updateXp for player
         // go back to map
         // update gold collected
@@ -76,7 +78,7 @@ function monsterAttack() {
         updateLifeHtml();
         currentTurn = "player";
     } else {
-        alert("GAME OVER");
+        loserAlert();
     }
 }
 
@@ -125,7 +127,10 @@ attackBtn.addEventListener("click", () => {
 
 
 });
-
+//
+runBtn.addEventListener("click", () => {
+    loserAlert();
+})
 //animate the charcater
 function animateCharacter() {
     document.querySelector("#left").style.animation = "";
@@ -151,3 +156,31 @@ function animateCharacter() {
         }, 1200);
       }, 500);
 }
+
+// winnerAlert
+function winnerAlert(winner,xp,gold){
+    document.querySelector(".player-name").innerText=winner;
+    document.querySelector(".xp").innerText=xp;
+    document.querySelector(".gold").innerText=gold;
+    document.querySelector(".alert-container").style.display = "block";
+    document.querySelector(".alrt-win").style.display = "block";
+    document.querySelector(".alert-lose").style.display = "none";
+    
+}
+function loserAlert(){
+    document.querySelector(".alert-container").style.display = "block";
+    document.querySelector(".alrt-win").style.display = "none";
+    document.querySelector(".alert-lose").style.display = "block";
+    
+
+
+}
+// alertPlatAgain
+document.querySelector(".play-again-button").addEventListener("click", () => {
+    window.location.reload();
+
+})
+// alertbackToMenue
+document.querySelector(".back-to-main-button").addEventListener("click", () => {
+    window.location.reload();
+})
