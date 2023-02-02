@@ -196,6 +196,68 @@ body {
   animation: fadeInOut 1s ease-in-out forwards;
   z-index: 10;
 }
+
+
+/* alert */
+.alert-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+  /* max-width: 50%; */
+  width: 500px !important;
+  z-index: 20;
+}
+
+.alert-container .alert {
+  background-color: lightyellow;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  box-shadow: 0px 0px 10px lightgray;
+  width: 50%;
+}
+
+.alert-container .winner-message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.alert-container .player-name {
+  color: brown;
+}
+
+.alert-container .xp, .alert-container .gold {
+  font-style: italic;
+  color: goldenrod;
+}
+
+.alert-container .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.alert-container .play-again-button,.alert-container .back-to-main-button {
+  background-color: goldenrod;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.alert-container .play-again-button:hover,.alert-container  .back-to-main-button:hover {
+  background-color: brown;
+}
+
+
 /* animation Part */
 @keyframes fadeInOut {
   from {
