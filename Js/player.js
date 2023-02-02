@@ -1,4 +1,4 @@
-
+import
 
  class Player {
     constructor(name, defense, dexterity, gold, potion, lvl, strength, currentXP, life){
@@ -14,6 +14,7 @@
     }
 }
 export const player1 = new Player('YBN', 50, 4, 0, 3, 3, 20, 100, 100);
+
 
 // Strength (will be used to determine damage)
 // Defense (will be used to determine damage)
