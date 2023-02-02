@@ -11,41 +11,49 @@
 
     <div class="main-Create-Player">
 
-      <div class="create-player-background"></div>
+        <div class="create-player-background"></div>
 
         <div class="input-container">
-         <div class="headings">
-            <h2>Player Name</h2> 
-            <h2><h2>Something else</h2>
-            <h2>Something else</h2>
-            <h2 class="gender">Gender</h2>
-        </div>
-        <div class="input-player-data">
-            <input id="name-of-player" type="text">
-            <input id="strength-of-player" type="text">
-            <input id="xp-of-player" type="range" min="4" max="6">
-            <div>
-                <select class="select-gender" name="gender" id="gender-select">
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                    <option value="alien">Alien</option>
-                </select>
+
+            <div class="headings">
+                <h2>Player Name</h2> 
+                <h2><h2>XP</h2>
+                <h2>Strength</h2>
+                <h2 class="gender">Gender</h2>
+            </div>
+
+            <div class="input-data">
+
+                <input id="name-of-player" type="text">
+
+                <div class="decrease-increase-container">
+                    <button id="xp-data-decrease">-</button>
+                    <input id="xp-data-value" type="text" value="1"/>
+                    <button id="xp-data-increase">+</button>
+                </div>
+            
+                <div class="decrease-increase-container">
+                    <button id="strength-data-decrease">-</button>
+                    <input id="strength-data-value" type="text" value="1" />
+                    <button id="strength-data-increase">+</button>
+                </div>
+
+\               <div>
+                    <select class="select-gender" name="gender" id="gender-select">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="alien">Alien</option>
+                    </select>
+                </div>
+
             </div>
         </div>
-        </div>
-            <div class="player-stats-container">
-                <div class="stats-headings headings">
-                    <h2>XP</h2>
-                    <h2>Life</h2>
-                </div>
-                <div class="stats-headings headings">
-                    <h2 id="xp">100</h2>
-                    <h2 id="life">100</h2>
-                </div>
-        </div>
-     
+
     </div>
 
     <script src="./Js/input.js" type="module"></script>
+  
+
 </body>  
+<script src="./Js/createPlayer.js" type="module"></script>
 </html>
