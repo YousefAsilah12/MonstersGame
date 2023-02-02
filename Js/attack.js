@@ -138,15 +138,15 @@ function animateCharacter() {
     }, 0);
 
     setTimeout(function() {
-        let img= document.createElement("img");
-        img.src = "/imgs/fight.png"
-        img.classList.add("fight-img");
-        document.querySelector(".middle").appendChild(img);
+        // let img= document.createElement("img");
+        // img.src = "/imgs/fight.png"
+        // img.classList.add("fight-img");
+        // document.querySelector(".middle").appendChild(img);
         var audio = new Audio("/sounds/sword.mp3");
         audio.play();
         
         setTimeout(function() {
-            img.remove();
+            // img.remove();
             
         }, 1200);
       }, 500);
