@@ -1,6 +1,6 @@
 export {monsters};
 class Monster {
-    constructor(name, defense, dexterity, gold, lvl, strength, rewardXP, life,location){
+    constructor(name, defense, dexterity, gold, lvl, strength, rewardXP, life,location,img){
         this.name = name;
         this.strength = strength;
         this.defense = defense;
@@ -10,6 +10,8 @@ class Monster {
         this.dexterity = dexterity;
         this.gold = gold;
         this.location = location;
+        this.img = img;
+        
     }
 }
 export const monster1 = new Monster('Gooloop', 30, 2, 240, 2, 20, 20, 100,"blackJungel");
@@ -51,6 +53,7 @@ const monsterNames = [
   const rewardXP = Math.floor(Math.random() * 100 + 50);
   const life = Math.floor(Math.random() * 100 + 50);
   const location = locations[locationIndex];
+const img='./img/monsterimage.png';
 
   const monster = new Monster(
     name,
@@ -61,7 +64,9 @@ const monsterNames = [
     strength,
     rewardXP,
     life,
-    location
+    location,
+    img
+
   );
 
   monsters.push(monster);
