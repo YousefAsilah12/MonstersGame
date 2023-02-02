@@ -1,5 +1,6 @@
 import {
-    monster1
+    monster1,
+    monsters
 } from "./monster.js";
 import {
     player1
@@ -17,7 +18,7 @@ import {
 } from "./input.js";
 
 
-
+console.log(monsters);
 let currentTurn = checkFirstStart(player1, monster1);
 playerName.innerText = player1.name;
 monsterName.innerText = monster1.name;
