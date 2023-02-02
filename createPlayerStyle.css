@@ -24,7 +24,7 @@ body {
     height: 60rem;
 }
 
-.input-player-data {
+.input-data {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@ input{
 .headings h2{
     color: rgb(252, 252, 252);
     min-width: fit-content;
-    margin-top: 0.8rem;
+    margin-top: 1.1rem;
 }
 
 .input-container {
@@ -63,18 +63,11 @@ input{
     color: black;
 }
 
-.player-stats-container{
-    display: flex;
-    color:whitesmoke;
-    height: fit-content;
-    justify-content: space-between;
-    min-width: 10rem;
-    border: solid white;
+
+.decrease-increase-container button{
+    width: 2rem;
 }
-.stats-headings{
-    display: flex;
-    flex-direction: column;
-}
+
 
 @media (max-width: 900px){
 
