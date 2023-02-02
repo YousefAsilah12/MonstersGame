@@ -53,3 +53,11 @@ xpDownBtn.addEventListener('click', decreaseXp);
 
 strengthUpBtn.addEventListener('click', increaseStrength);
 strengthDownBtn.addEventListener('click', decreaseStrength);
+
+
+
+// event 
+document.querySelector('.goTO').addEventListener("click",()=>{
+	window.location.href = "locations.html";
+	
+})

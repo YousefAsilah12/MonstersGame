@@ -1,7 +1,6 @@
-import
 
- class Player {
-    constructor(name, defense, dexterity, gold, potion, lvl, strength, currentXP, life){
+class Player {
+    constructor(name, defense, dexterity, gold, potion, lvl, strength, currentXP, life) {
         this.name = name;
         this.defense = defense;
         this.dexterity = dexterity;

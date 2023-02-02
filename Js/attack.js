@@ -131,6 +131,7 @@ attackBtn.addEventListener("click", () => {
 //
 runBtn.addEventListener("click", () => {
     loserAlert();
+    window.location.href = "locations.html";
 })
 //animate the charcater
 function animateCharacter() {
@@ -173,7 +174,9 @@ function loserAlert(){
     document.querySelector(".alrt-win").style.display = "none";
     document.querySelector(".alert-lose").style.display = "block";
     
+    window.location.href = "startGame.html";
 
+    
 
 }
 // alertPlatAgain
@@ -183,5 +186,5 @@ document.querySelector(".play-again-button").addEventListener("click", () => {
 })
 // alertbackToMenue
 document.querySelector(".back-to-main-button").addEventListener("click", () => {
-    window.location.reload();
+    window.location.href = "locations.html";
 })
