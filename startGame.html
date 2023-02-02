@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-image: url("./imgs/backGroundStart.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;;
+        width: 100vw;
+        height: 100vh;
+      }
+      /* Add some styles to center the button */
+      .start-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      /* Style the start button */
+      .start-button {
+        background-color: green;
+        color: white;
+        padding: 20px 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="start-page">
+      <!-- Add the start button -->
+      <button class="start-button">Start Game</button>
+    </div>
+    <script>
+      document.querySelector('.start-button').addEventListener('click', ()=>{
+        window.location.href = './index.html';
+      })
+    </script>
+  </body>
+</html>
