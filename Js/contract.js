@@ -3,6 +3,7 @@ console.log(monsters);
 
 const container = document.querySelector('#container');
  for (let i = 0; i < monsters.length; i++) {
+  
     let card = document.createElement('div');
   let name = document.createElement('h2');
   name.innerText = monsters[i].name;
@@ -24,9 +25,11 @@ const container = document.querySelector('#container');
   location.innerText = `Location: ${monsters[i].location}`;
   let image = document.createElement('img');
   image.setAttribute('src', monsters[i].img);
-  img..addEventListener("click", function{
+  image.addEventListener("click", ()=>{
+    window.location.href ="index.html";
     
   });
+  
   card.appendChild(name);
   card.appendChild(level);
   card.appendChild(defense);
@@ -38,6 +41,8 @@ const container = document.querySelector('#container');
   card.appendChild(location);
   card.appendChild(image);
   container.appendChild(card);
+
+    
 }
 
 

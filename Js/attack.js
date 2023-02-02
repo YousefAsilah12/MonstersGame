@@ -16,8 +16,12 @@ import {
     monsterHealth,
     monsterLvl,
 } from "./input.js";
-
-
+window.onload = function() {
+    if (!localStorage.getItem("visited")) {
+      window.location.replace("startGame.html");
+      localStorage.setItem("visited", "true");
+    }
+  };
 console.log(monsters);
 let currentTurn = checkFirstStart(player1, monster1);
 playerName.innerText = player1.name;
@@ -131,7 +135,7 @@ attackBtn.addEventListener("click", () => {
 //
 runBtn.addEventListener("click", () => {
     loserAlert();
-    window.location.href = "locations.html";
+    // window.location.href = "locations.html";
 })
 //animate the charcater
 function animateCharacter() {
@@ -187,4 +191,4 @@ document.querySelector(".play-again-button").addEventListener("click", () => {
 // alertbackToMenue
 document.querySelector(".back-to-main-button").addEventListener("click", () => {
     window.location.href = "locations.html";
-})
+});
