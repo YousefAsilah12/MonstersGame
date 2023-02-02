@@ -63,9 +63,11 @@ input{
     color: black;
 }
 
+
 .decrease-increase-container button{
     width: 2rem;
 }
+
 
 @media (max-width: 900px){
 

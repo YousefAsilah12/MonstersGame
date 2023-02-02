@@ -3,117 +3,302 @@
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
- }
- 
- body{
-  height: 100vh;
+}
 
- }
- 
- .container {  display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1.3fr 0.7fr;
-   grid-auto-columns: 1fr;
-   grid-auto-rows: 1fr;
-   gap: 0px 0px;
-   grid-auto-flow: row;
-   grid-template-areas:
-     "Player Middle Monster"
-     "Actions Actions Actions";
- 
-   background-image: url("/imgs/battleback1.png");
- 
- 
-   height: 100%;
- 
- 
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
- }
- 
- .player { grid-area: Player;}
- 
- .monster { grid-area: Monster;}
- 
- .middle { grid-area: Middle;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-around;
- }
- .middle h2 {
-   font-size: 3rem;
- }
- .actions { grid-area: Actions;}
- 
- 
- 
- .player img {
-   width: 500px;
-   height: 500px;
-   margin-left: 15rem;
- }
- 
- .monster img {
-   width: 500px;
-   height: 500px;
-   transform: scaleX(-1);
- }
- 
- 
- .footer {
-   display: grid; 
-   grid-template-columns: 1fr 1fr 1fr; 
-   grid-template-rows: 1fr 1fr; 
-   gap: 0px 0px; 
-   border: 5px solid black;
-   grid-template-areas: 
-     "attack info info"
-     "run info info"; 
-   grid-area: Actions;
-   background: rgba(51, 170, 51, .4);
- }
- 
- .attack { grid-area: attack;
-   border: 5px solid black;
-   text-align: center; 
-   padding: 5rem;
- }
- 
- 
- .run { grid-area: run;
-     border: 5px solid black;
-     text-align: center;
-     padding: 5rem;
-    }
- 
- .run button, .attack button {
-     font-size: 50px;
-     background-color: Transparent;
-     background-repeat:no-repeat;
-     border-radius: 30px;
-     padding: 0.5rem;
-     border: black solid 5px;
-   }
- 
-   .run button:hover, .attack button:hover {
-     cursor: pointer;
-     background: rgba(51, 170, 51, .7);
- 
-   }
- 
- 
- .info { grid-area: info;
-     border: 5px black solid;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     align-items: flex-start;
-   }
- 
- .info p {
-   margin-left: 5rem;
-   margin-top: 3rem;
-   font-size: 50px;
- }
+body {
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("/imgs/battleback1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.up-side {
+  height: 70%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.player {
+  grid-area: Player;
+  display: flex;
+  ;
+  justify-content: center;
+  align-items: center;
+  ;
+}
+
+#left
+{
+  position: absolute;
+  position: absolute;
+  left: -100px;
+}
+#right {
+  position: absolute;
+  right: 100px;
+  transform: scaleX(-1) ;
+  }
+  #img_2{
+
+  }
+
+/* #img_1 {
+  animation-duration: 2s;
+  animation: walkLeft ease-in-out forwards;
+}
+
+#img_2 {
+  transform: scaleX(-1);
+
+  animation-duration: 2s;
+  animation: walkRight ease-in-out forwards;
+} */
+
+.monster {
+  grid-area: Monster;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.middle {
+  display: flex;
+  ;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle h2 {
+  font-size: 3rem;
+}
+
+.actions {
+  grid-area: Actions;
+}
+
+
+
+.player img {
+  width: 500px;
+  height: 500px;
+}
+
+.monster img {
+  width: 500px;
+  height: 500px;
+}
+
+.contract-info {
+  height: fit-content;
+  text-align: center;
+
+}
+
+.footer {
+  font-size: 1rem !important;
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  width: 100vw;
+  border: 5px solid black;
+  background: rgba(51, 170, 51, .4);
+}
+.left-footer{
+  display: flex;;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-up,
+.footer-down {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attack {
+  border: 1rem px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.run {
+  text-align: center;
+}
+
+.run button,
+.attack button {
+  font-size: 3rem;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  padding: 0.5rem;
+  border: black solid 5px;
+}
+
+.run button:hover,
+.attack button:hover {
+  cursor: pointer;
+  background: rgba(51, 170, 51, .7);
+
+}
+
+
+.info {
+  width: 100%;
+  border: 3px  black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;;
+}
+
+.info p {
+  margin-left: 5rem;
+  margin-top: 3rem;
+  font-size: 50px;
+}
+.fight-img {
+  
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  opacity: 0;
+  animation: fadeInOut 1s ease-in-out forwards;
+  z-index: 10;
+}
+
+
+/* alert */
+.alert-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+  /* max-width: 50%; */
+  width: 500px !important;
+  z-index: 20;
+}
+
+.alert-container .alert {
+  background-color: lightyellow;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  box-shadow: 0px 0px 10px lightgray;
+  width: 50%;
+}
+
+.alert-container .winner-message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.alert-container .player-name {
+  color: brown;
+}
+
+.alert-container .xp, .alert-container .gold {
+  font-style: italic;
+  color: goldenrod;
+}
+
+.alert-container .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.alert-container .play-again-button,.alert-container .back-to-main-button {
+  background-color: goldenrod;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.alert-container .play-again-button:hover,.alert-container  .back-to-main-button:hover {
+  background-color: brown;
+}
+
+
+/* animation Part */
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes walkLeft {
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc(40% - 50px);
+  }
+}
+
+@keyframes walkRight {
+  from {
+    right: -100px;
+  }
+  to {
+    right: calc(40% - 50px);
+  }
+}
+
+@keyframes walkBackLeft {
+  from {
+    left: calc(40% - 50px);
+  }
+  to {
+    left: -100px;
+  }
+}
+
+@keyframes walkBackRight {
+  from {
+    right: calc(40% - 50px);
+  }
+  to {
+    right: -100px;
+  }
+}

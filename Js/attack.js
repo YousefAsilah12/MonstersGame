@@ -1,5 +1,10 @@
-import { monster1 } from "./monster.js";
-import { player1 } from "./player.js";
+import {
+    monster1,
+    monsters
+} from "./monster.js";
+import {
+    player1
+} from "./player.js";
 
 import {
     runBtn,
@@ -13,12 +18,12 @@ import {
 } from "./input.js";
 
 
-
+console.log(monsters);
 let currentTurn = checkFirstStart(player1, monster1);
-playerName.innerText=player1.name;
-monsterName.innerText=monster1.name;
-monsterHealth.innerText=monster1.life;
-playerHealth.innerText=player1.life;
+playerName.innerText = player1.name;
+monsterName.innerText = monster1.name;
+monsterHealth.innerText = monster1.life;
+playerHealth.innerText = player1.life;
 
 
 
@@ -28,8 +33,8 @@ function updateLifeHtml() {
 }
 
 function updateXPandGold() {
-  player1.currentXP += monster1.rewardXP;
-  player1.gold += monster1.gold;
+    player1.currentXP += monster1.rewardXP;
+    player1.gold += monster1.gold;
 }
 
 
@@ -48,13 +53,15 @@ function playerAttack() {
         updateLifeHtml();
         currentTurn = "monster";
     } else {
-      
+
         console.log("monster died!");
         updateXPandGold();
         console.log("player gold", player1.gold);
         console.log("player XP", player1.currentXP);
-        alert("GAME OVER");
-
+        winnerAlert(player1.name, player1.currentXP, player1.gold);
+        
+        
+        
         // updateXp for player
         // go back to map
         // update gold collected
@@ -72,7 +79,7 @@ function monsterAttack() {
         updateLifeHtml();
         currentTurn = "player";
     } else {
-        alert("GAME OVER");
+        loserAlert();
     }
 }
 
@@ -100,14 +107,81 @@ function checkFirstStart(monster, player) {
     }
     return "monster";
 }
-if(currentTurn === "monster"){
-  attackBtn.textContent = 'Monster Attack'
-} else { attackBtn.textContent = 'Player Attack'};
+if (currentTurn === "monster") {
+    attackBtn.textContent = 'Monster Attack'
+} else {
+    attackBtn.textContent = 'Player Attack'
+};
 
 
 attackBtn.addEventListener("click", () => {
-    attack(currentTurn);
-    if(currentTurn === "monster"){
-      attackBtn.textContent = 'Monster Attack'
-    } else { attackBtn.textContent = 'Player Attack'}
+    document.querySelector(".contract-info").style.display = "none";
+    animateCharacter();
+      // Code to continue after the animation ends
+      attack(currentTurn);
+      if (currentTurn === "monster") {
+        attackBtn.textContent = 'Monster Attack'
+    } else {
+        attackBtn.textContent = 'Player Attack'
+    }
+
+
+
 });
+//
+runBtn.addEventListener("click", () => {
+    loserAlert();
+})
+//animate the charcater
+function animateCharacter() {
+    document.querySelector("#left").style.animation = "";
+    document.querySelector("#right").style.animation = "";
+    setTimeout(function() {
+      document.querySelector("#left").style.animation =
+        "walkLeft 1s ease-in-out forwards, walkBackLeft 1s ease-in-out 1s forwards";
+      document.querySelector("#right").style.animation =
+        "walkRight 1s ease-in-out forwards, walkBackRight 1s ease-in-out 1s forwards";
+    }, 0);
+
+    setTimeout(function() {
+        // let img= document.createElement("img");
+        // img.src = "/imgs/fight.png"
+        // img.classList.add("fight-img");
+        // document.querySelector(".middle").appendChild(img);
+        var audio = new Audio("/sounds/sword.mp3");
+        audio.play();
+        
+        setTimeout(function() {
+            // img.remove();
+            
+        }, 1200);
+      }, 500);
+}
+
+// winnerAlert
+function winnerAlert(winner,xp,gold){
+    document.querySelector(".player-name").innerText=winner;
+    document.querySelector(".xp").innerText=xp;
+    document.querySelector(".gold").innerText=gold;
+    document.querySelector(".alert-container").style.display = "block";
+    document.querySelector(".alrt-win").style.display = "block";
+    document.querySelector(".alert-lose").style.display = "none";
+    
+}
+function loserAlert(){
+    document.querySelector(".alert-container").style.display = "block";
+    document.querySelector(".alrt-win").style.display = "none";
+    document.querySelector(".alert-lose").style.display = "block";
+    
+
+
+}
+// alertPlatAgain
+document.querySelector(".play-again-button").addEventListener("click", () => {
+    window.location.reload();
+
+})
+// alertbackToMenue
+document.querySelector(".back-to-main-button").addEventListener("click", () => {
+    window.location.reload();
+})
